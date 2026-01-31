@@ -5,10 +5,8 @@ RUN apt update \
     && apt install -y sudo tzdata \
     && apt clean all
 
-#RUN mkdir /root/scripts && mkdir /root/target-scripts
-#COPY *.sh /root/
-#COPY scripts/*.sh /root/scripts/
-#COPY target-scripts/*.sh /root/target-scripts/
-
-#RUN cd /root && ./prepare-pkgs.sh && apt install -y git && apt clean all
-#RUN cd /root && ./install-docker.sh && apt clean all
+RUN mkdir /tmp/scripts && mkdir /tmp/target-scripts
+COPY ./*.sh /tmp/
+COPY scripts/*.sh /tmp/scripts/
+COPY target-scripts/*.sh /tmp/target-scripts/
+RUN cd /tmp && ./precheck.sh && ./prepare-pkgs.sh
