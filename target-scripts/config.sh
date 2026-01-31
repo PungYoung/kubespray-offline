@@ -12,8 +12,8 @@ NERDCTL_VERSION=2.2.1
 CNI_VERSION=1.8.0
 
 # Some container versions, must be same as ../imagelists/images.txt
-NGINX_VERSION=1.29.2
-REGISTRY_VERSION=2.8.3
+NGINX_VERSION=1.29.4
+REGISTRY_VERSION=3.0.0
 
 # container registry port
 REGISTRY_PORT=${REGISTRY_PORT:-35000}

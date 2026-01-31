@@ -3,6 +3,8 @@
 ## develop
 
 - Update kubespray 2.30.0
+- Update registry server to 3.0.0
+- Update Nginx to 1.29.4
 
 ## v2.29.1-1 - 2026/01/24
 
